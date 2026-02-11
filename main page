@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Contest Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Art Contest Hub</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contest">Contest</a></li>
+                <li><a href="#submit">Submit</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to Our Annual Art Contest!</h2>
+        <p>Showcase your creativity. Win prizes. Enter now!</p>
+        <button onclick="scrollToSection('submit')">Enter Contest</button>
+    </section>
+
+    <section id="contest">
+        <h2>About the Contest</h2>
+        <p>Submit original art in categories: Digital, Painting, Sculpture. Deadline: Dec 31, 2023. Prizes: $500 winner, $200 runner-up.</p>
+        <h3>Rules</h3>
+        <ul>
+            <li>No AI-generated art.</li>
+            <li>Max file size: 10MB.</li>
+            <li>Entry fee: $10 (refundable if you win).</li>
+        </ul>
+    </section>
+
+    <section id="submit">
+        <h2>Submit Your Art</h2>
+        <form id="submission-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="digital">Digital</option>
+                <option value="painting">Painting</option>
+                <option value="sculpture">Sculpture</option>
+            </select>
+            <label for="file">Upload Art (Image/Video):</label>
+            <input type="file" id="file" accept="image/*,video/*" required>
+            <button type="button" id="pay-button">Pay $10 & Submit</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>Art Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/300x200?text=Sample+Art+1" alt="Sample Art">
+            <img src="https://via.placeholder.com/300x200?text=Sample+Art+2" alt="Sample Art">
+            <!-- Add more images or integrate dynamic loading later -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact: info@artcontesthub.com | &copy; 2023 Art Contest Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
